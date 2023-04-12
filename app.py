@@ -56,7 +56,7 @@ st.markdown("----")
 with st.container():
     st.header("My Projects")
     st.write("##")
-    image_col1, text_col1 = st.columns((1,2))
+    image_col1, text_col1 = st.columns(2)
     
     # -------------- Sports Revenue Analysis --------------------
     
@@ -124,7 +124,7 @@ with st.container():
         
 st.markdown("----")  
 with st.container():
-    text_col2, image_col2 = st.columns((2,1))
+    text_col2, image_col2 = st.columns(2)
     
     # -------------- Hotel Revenue Analysis --------------------
     with text_col2:
@@ -195,7 +195,7 @@ with st.container():
          
 st.markdown("----")  
 with st.container():
-    image_col3, text_col3 = st.columns((1,2))
+    image_col3, text_col3 = st.columns(2)
     
     # -------------- Lottery Revenue Analysis --------------------
     
@@ -265,7 +265,7 @@ with st.container():
 
 st.markdown("----")  
 with st.container():
-    text_col4, image_col4 = st.columns((2,1))
+    text_col4, image_col4 = st.columns(2)
     
     # -------------- Super Market Revenue Analysis --------------------
     with text_col4:
@@ -336,7 +336,7 @@ with st.container():
                 
 st.markdown("----")  
 with st.container():
-    image_col5, text_col5 = st.columns((1,2))
+    image_col5, text_col5 = st.columns(2)
     
     # -------------- People Counting Dashboard --------------------
     
