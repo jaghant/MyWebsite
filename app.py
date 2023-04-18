@@ -4,6 +4,7 @@ from streamlit_lottie import st_lottie
 import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_elements import elements, mui, html, sync
+# from st_functions import st_button, load_css
 
 
 # Page config
@@ -277,9 +278,11 @@ with st.container():
             - Use Month on Month Growth Rate.
             - Metrics in Power BI let customers curate their metrics and track them against key business objectives, in a single pane.
             - In this Power BI used to create views of report pages that are optimized for viewing on mobile devices.    
-            
+            - Template created in Figma
             """
         )    
+        link = "https://app.powerbi.com/view?r=eyJrIjoiMmQyMzA4YWYtNjAxYS00YzY1LWJhYTgtOWFiZGU3YmM3MWEzIiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9"
+        st.write(f" - [Dashboard Link]({link})")
         
     with image_col4:
                 IMAGES = [
@@ -342,8 +345,9 @@ with st.container():
     
     with image_col5:
                 IMAGES = [
-            "https://user-images.githubusercontent.com/108980892/231461167-750095ea-82b9-4ca9-a5dc-beb159505945.png",
-            "https://user-images.githubusercontent.com/108980892/231461228-b8ac22e6-731f-4be5-b46f-919e18c6bdc9.png"
+            "https://user-images.githubusercontent.com/108980892/232694842-1f74fdcb-52db-4d53-9193-a975590afef9.png",
+            "https://user-images.githubusercontent.com/108980892/231670172-52028f01-4145-474a-ba00-5274ed17c337.png",
+            "https://user-images.githubusercontent.com/108980892/231670051-f1622f16-0ddc-4cf6-8e7c-8c2cbe0b3437.png"
         ]
 
 
@@ -394,13 +398,16 @@ with st.container():
         st.write(
             """
             - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
-                visualization – Book mark using visualization – Tool tips
+                visualization – Book mark using visualization – Tool tips.
             - Power BI is a popular business intelligence solution that is comprised of services, apps, and 
                 connectors that allow you to pull the data from various sources and create meaningful reports. To connect Power BI to a data source such as MySQL,  
-                you can use a corresponding ODBC driver  
-            
+                you can use a corresponding ODBC driver.  
+            - Template created in Microsoft power point with background animation.
             """
-        )  
+        )
+        link = "https://app.powerbi.com/view?r=eyJrIjoiZjQzMTI0MmMtYWZhNy00MmJiLTk1OTktN2I5YjcyODNjZjgwIiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9"
+        st.write(f" - [Dashboard Link]({link})")
+          
         
 # ------------Contact ------------
 with st.container():
