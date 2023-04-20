@@ -346,8 +346,8 @@ with st.container():
     with image_col5:
                 IMAGES = [
             "https://user-images.githubusercontent.com/108980892/232694842-1f74fdcb-52db-4d53-9193-a975590afef9.png",
-            "https://user-images.githubusercontent.com/108980892/231670172-52028f01-4145-474a-ba00-5274ed17c337.png",
-            "https://user-images.githubusercontent.com/108980892/231670051-f1622f16-0ddc-4cf6-8e7c-8c2cbe0b3437.png"
+            "https://user-images.githubusercontent.com/108980892/233340533-169a3168-3804-4314-a9b7-d1d20d289e6a.png",
+            "https://user-images.githubusercontent.com/108980892/233340701-1fd1c039-120c-4574-92e2-fff4013be7a7.png"
         ]
 
 
