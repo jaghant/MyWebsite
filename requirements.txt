@@ -2,3 +2,4 @@ streamlit
 streamlit-lottie
 requests
 streamlit_elements
+streamlit-option-menu
