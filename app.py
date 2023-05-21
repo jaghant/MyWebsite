@@ -5,6 +5,8 @@ import streamlit.components.v1 as components
 from PIL import Image
 from streamlit_elements import elements, mui, html, sync
 from streamlit_option_menu import option_menu
+import os
+import time
 # from st_functions import st_button, load_css
 
 
@@ -27,7 +29,9 @@ def local_css(file_name):
         
 local_css("style/style.css")        
 
-lottie_coding = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_qp1q7mct.json")
+# lottie_coding = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_qp1q7mct.json")
+lottie_coding = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_o6spyjnc.json")
+
 
 
 # ------------Header Section -------------
@@ -57,7 +61,7 @@ st.markdown("----")
 
 # ------------ Internship Training -------
 with st.container():
-    left_col1, right_col1 = st.columns(2)
+    left_col1, right_col1 = st.columns((2,1))
     with left_col1:
         st.write("##")
         st.header("INTERNSHIP TRAINING.")
@@ -70,17 +74,20 @@ with st.container():
               different visualization - Book mark using visualization - Tool tips.
             - Dashboard publish to Power BI cloud - Dashboard and MySQL database connections using 
               On-premises data gateway - Scheduled based refresh of the dashboard. 
-            - Time series forecasting analysis
+            - Time series forecasting analysis.
             - Python automate - Run the python file watcher - When the file put into the folder - 
-              File watcher Push the data into MySQL database - If any error on this file Push the error folder
-              & check the log file using fix the error's - If no error, the file push to the success folder & 
-              push to the MySQL database - All of this run on a local server.
+              File watcher Push the data into MySQL database.
+            - If any error on this file Push the error folder & check the log file using fix the error's - If no error, 
+              the file push to the success folder & push to the MySQL database - All of this run on a local server.
             - In production, fix some error - Version problem in python - Python environment issue - Gateway connection - 
               MySQL to Power BI connection error.
                     """)
+    
     with right_col1:
-        image = Image.open('Internship Certificate.png')
-        st.image(image, channels = "RGB", width = 500, use_column_width = True)
+        st.write('##')
+        st.write('##')
+        image = Image.open('image/Internship Certificate.png')
+        st.image(image, channels = "RGB", width = 450, use_column_width = False)
 st.markdown("----")  
 # ------------ My Projects ---------------
 with st.container():
@@ -442,9 +449,10 @@ if selected == "Power BI Project":
                 """
                 - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
                     visualization – Book mark using visualization – Tool tips.
-                - Power BI is a popular business intelligence solution that is comprised of services, apps, and 
-                    connectors that allow you to pull the data from various sources and create meaningful reports. To connect Power BI to a data source such as MySQL,  
-                    you can use a corresponding ODBC driver.  
+                - Visualize the people counting data in the Power BI dashboard.
+                - Visualize this week's count and this month's count. Visualize the overall summary.
+                - A good user interface - DAX measures - basic calculations - visualize different plots - filters and easy to understand this dashboard.
+                - Power BI dashboard and MySQL database connections using On-premises data gateway.  
                 - Template created in Microsoft power point with background animation.
                 """
             )
@@ -454,7 +462,317 @@ if selected == "Power BI Project":
 # ------------------- Sem Project ---------------------------           
 if selected == "Sem Project":
     st.subheader(f"{selected}")
+    st.header("People Counting & Tracking Streamlit Web Application")
+    
+    # ------------ Internship Training -------
+    with st.container():
+        left_col7, right_col7 = st.columns(2)
+    with left_col7:
+        st.write("##")
+        st.markdown("""
+                    - Open CV using people counting & tracking streamlit web application. In this project main purpose of counting the people
+                      in and people out in our campus or any organization.
+                    - Technologies used in this project - Python, Streamlit, Power BI, MySQL database, On-premises data gateway.
+                    - Python to access CCTV cameras, people enter the boundary line, can detect the people same as counting the people in and people out.
+                    - People count data stored in an Excel file after Excel data 24 hours once updated to MySQL database.
+                    - Visualize the people counting data in the Power BI dashboard.
+                    - Visualize this week's count and this month's count. Visualize the overall summary.
+                    - A good user interface - DAX measures - basic calculations - visualize different plots - filters and easy to understand this dashboard.
+                    - Power BI dashboard and MySQL database connections using On-premises data gateway.
+                    """)
+    with right_col7:
+        st.write('##')
+        IMAGES = [
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Workflow.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Login.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/main.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Power-BI.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Home.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Weekly%20report.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20IV/Overall%20report.png?raw=true"
+    ]
+        def slideshow_swipeable(images):
+                # Generate a session state key based on images.
+                        key = f"slideshow_swipeable_{str(images).encode().hex()}"
+
+                # Initialize the default slideshow index.
+                        if key not in st.session_state:
+                            st.session_state[key] = 0
+
+                # Get the current slideshow index.
+                        index = st.session_state[key]
+
+                # Create a new elements frame.
+                        with elements(f"frame_{key}"):
+
+                    # Use mui.Stack to vertically display the slideshow and the pagination centered.
+                    # https://mui.com/material-ui/react-stack/#usage
+                            with mui.Stack(spacing=2, alignItems="center"):
+
+                        # Create a swipeable view that updates st.session_state[key] thanks to sync().
+                        # It also sets the index so that changing the pagination (see below) will also
+                        # update the swipeable view.
+                        # https://mui.com/material-ui/react-tabs/#full-width
+                        # https://react-swipeable-views.com/demos/demos/
+                                with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
+                                    for image in images:
+                                        html.img(src=image, css={"width": "100%"})
+
+                        # Create a handler for mui.Pagination.
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                def handle_change(event, value):
+                            # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
+                                    st.session_state[key] = value-1
+
+                        # Display the pagination.
+                        # As the index value can also be updated by the swipeable view, we explicitely
+                        # set the page value to index+1 (page value starts at 1).
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
+
+
+            # if __name__ == '__main__':
+        slideshow_swipeable(IMAGES)  
+    st.markdown("---") 
+    st.header("Sales Forecasting Time Series Analysis")
+    with st.container():
+        left_col8, right_col8 = st.columns(2)
+               
+        
+        with left_col8:
+            IMAGES = [
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Data.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Ship%20modes.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Total%20sales%20per%20year.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Total%20sales%20trend.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Monthly%20sales.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Yearly%20trend.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Sales%20trend%20.over%20dayspng.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Distribution.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Sales%20count.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Sales%20value.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Mean%20test.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Trend_seasonality.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Model%20buildingpng.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20III/Sales%20forecast.png?raw=true"
+            ]
+            def slideshow_swipeable(images):
+                # Generate a session state key based on images.
+                        key = f"slideshow_swipeable_{str(images).encode().hex()}"
+
+                # Initialize the default slideshow index.
+                        if key not in st.session_state:
+                            st.session_state[key] = 0
+
+                # Get the current slideshow index.
+                        index = st.session_state[key]
+
+                # Create a new elements frame.
+                        with elements(f"frame_{key}"):
+
+                    # Use mui.Stack to vertically display the slideshow and the pagination centered.
+                    # https://mui.com/material-ui/react-stack/#usage
+                            with mui.Stack(spacing=2, alignItems="center"):
+
+                        # Create a swipeable view that updates st.session_state[key] thanks to sync().
+                        # It also sets the index so that changing the pagination (see below) will also
+                        # update the swipeable view.
+                        # https://mui.com/material-ui/react-tabs/#full-width
+                        # https://react-swipeable-views.com/demos/demos/
+                                with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
+                                    for image in images:
+                                        html.img(src=image, css={"width": "100%"})
+
+                        # Create a handler for mui.Pagination.
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                def handle_change(event, value):
+                            # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
+                                    st.session_state[key] = value-1
+
+                        # Display the pagination.
+                        # As the index value can also be updated by the swipeable view, we explicitely
+                        # set the page value to index+1 (page value starts at 1).
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
+
+
+            # if __name__ == '__main__':
+            slideshow_swipeable(IMAGES)
+        with right_col8:
+            st.markdown("""
+                    - The details of 9800 record and have 4 years of sales data in United States.
+                    - Data column using add some new columns month and year using the trend and seasonality of thee sales analysis
+                      in month and year wise.
+                    - Visualize the shipping time according to ship modes.
+                    - Plot monthly observation of total sales.
+                    - Find some same patterns observed in each year rise in December, November, and September.
+                    - Sales trend over days.
+                    - Plot the sales distribution.
+                    - Rolling mean test.
+                    - ARIMA Model - Visualization of the performance of our model.
+                    - Visualize the sales forecasting.
+                    - XG Boost Model.
+                    - Root mean squared error for XG Boost.
+                    - Model Evalustion.
+                    """)    
+    st.markdown("---")      
+    st.header("Health Data Analysis - EDA & Decision Tree Classification")
+    with st.container():
+        left_col9, right_col9 = st.columns(2)
+        
+        with left_col9:
+            st.markdown("""
+                        - The details of 7304 records and have one-year data with some NA values.
+                        - In the patients ages between 18 to 96 years.
+                        - Some patient's health data are present in the diagnosis and the diagnosis.
+                        - EDA - Matplotlib - Seaborn - Numpy - Pandas - Data Visualization - Analysis of the data.
+                        - Drop some unnecessary columns - Date columns using add some new columns day and month using Trend Analysis in Diagnosis or Not Diagnosis in month wise.
+                        - Decision Tree Classifier - Export the feature data - and load the feature data - Fix the target variable and features.
+                        - Testing & Training the data - Create decision tree classifier object - Train Decision Tree Classifier.
+                        - Predict the response for thee test dataset - Find the Accuracy - Visualizing the decision tree graph.
+                        """)
+            
+        with right_col9:
+            IMAGES = [
+                "https://github.com/jaghant/images/blob/main/Sem%20II/13.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/1%20Month%20Wise%20Diagnosis%20Yes%20or%20No%20In%20Male.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/2%20Month%20Wise%20Diagnosis%20Yes%20or%20No%20In%20Female.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/3.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/4.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/5.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/6.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/7.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/8.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/9.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/10.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/11.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/12.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/14.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20II/15.png?raw=true"
+            ]
+            def slideshow_swipeable(images):
+                # Generate a session state key based on images.
+                        key = f"slideshow_swipeable_{str(images).encode().hex()}"
+
+                # Initialize the default slideshow index.
+                        if key not in st.session_state:
+                            st.session_state[key] = 0
+
+                # Get the current slideshow index.
+                        index = st.session_state[key]
+
+                # Create a new elements frame.
+                        with elements(f"frame_{key}"):
+
+                    # Use mui.Stack to vertically display the slideshow and the pagination centered.
+                    # https://mui.com/material-ui/react-stack/#usage
+                            with mui.Stack(spacing=2, alignItems="center"):
+
+                        # Create a swipeable view that updates st.session_state[key] thanks to sync().
+                        # It also sets the index so that changing the pagination (see below) will also
+                        # update the swipeable view.
+                        # https://mui.com/material-ui/react-tabs/#full-width
+                        # https://react-swipeable-views.com/demos/demos/
+                                with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
+                                    for image in images:
+                                        html.img(src=image, css={"width": "100%"})
+
+                        # Create a handler for mui.Pagination.
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                def handle_change(event, value):
+                            # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
+                                    st.session_state[key] = value-1
+
+                        # Display the pagination.
+                        # As the index value can also be updated by the swipeable view, we explicitely
+                        # set the page value to index+1 (page value starts at 1).
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
+
+
+            # if __name__ == '__main__':
+            slideshow_swipeable(IMAGES)  
+
+    st.markdown("---") 
+    st.header("Bike Buyer's Data Analysis")
+    with st.container():
+        left_col10, right_col10 = st.columns(2)
+               
+        with left_col10:
+            IMAGES = [
+                "https://github.com/jaghant/images/blob/main/Sem%20I/1.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/2.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/3.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/4.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/5.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/6.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/7.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/8.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/9.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/10.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/11.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/12.png?raw=true",
+                "https://github.com/jaghant/images/blob/main/Sem%20I/13.png?raw=true"
+            ]
+            def slideshow_swipeable(images):
+                # Generate a session state key based on images.
+                        key = f"slideshow_swipeable_{str(images).encode().hex()}"
+
+                # Initialize the default slideshow index.
+                        if key not in st.session_state:
+                            st.session_state[key] = 0
+
+                # Get the current slideshow index.
+                        index = st.session_state[key]
+
+                # Create a new elements frame.
+                        with elements(f"frame_{key}"):
+
+                    # Use mui.Stack to vertically display the slideshow and the pagination centered.
+                    # https://mui.com/material-ui/react-stack/#usage
+                            with mui.Stack(spacing=2, alignItems="center"):
+
+                        # Create a swipeable view that updates st.session_state[key] thanks to sync().
+                        # It also sets the index so that changing the pagination (see below) will also
+                        # update the swipeable view.
+                        # https://mui.com/material-ui/react-tabs/#full-width
+                        # https://react-swipeable-views.com/demos/demos/
+                                with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
+                                    for image in images:
+                                        html.img(src=image, css={"width": "100%"})
+
+                        # Create a handler for mui.Pagination.
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                def handle_change(event, value):
+                            # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
+                                    st.session_state[key] = value-1
+
+                        # Display the pagination.
+                        # As the index value can also be updated by the swipeable view, we explicitely
+                        # set the page value to index+1 (page value starts at 1).
+                        # https://mui.com/material-ui/react-pagination/#controlled-pagination
+                                mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
+
+
+            # if __name__ == '__main__':
+            slideshow_swipeable(IMAGES)
+        with right_col10:
+            st.markdown("""
+                    - The details of 1000 users from different backgrounds with some injected NA values and output
+                      variables as to whether or not they buy a bike.
+                    - EDA - Matplotlib - Seaborn - Numpy - Pandas - Data Visualization - Analysis the data - Bike Purchase Trend Analysis.
+                    - Bike purchasing trend according to gender - region.
+                    - Bike purchasing trend according occupation.
+                    - Bike purchasing trend according to age.
+                    - Bike purchasing trend according to marital status.
+                    - Bike purchasing trend according to salary - education.
+                    - Bike purchasing trend according to numbers of their children.
+                    - Bike purchasing trend according to number of cars they own.
+                    - Bike purchasing trend of home owners - commuting distance.
+                    """)
               
+        
+        
         
 # ------------Contact ------------
 with st.container():
