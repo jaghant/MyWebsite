@@ -104,11 +104,11 @@ with st.container():
     )
     if selected == "Intern Project":
         st.subheader(f"{selected}")
-    
+        st.subheader("Sports Revenue Analysis")
         image_col2, text_col2 = st.columns(2)
     
     # -------------- Sports Revenue Analysis --------------------
-    
+        
         with image_col2:
                     IMAGES = [
                 "https://user-images.githubusercontent.com/108980892/225910844-589b5dd9-d95d-478e-babd-6c6a41017ec0.png",
@@ -159,8 +159,8 @@ with st.container():
 
             # if __name__ == '__main__':
                     slideshow_swipeable(IMAGES)
+        
         with text_col2:
-            st.subheader("Sports revenue Analysis")
             st.write(
                 """
                 - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
@@ -171,13 +171,14 @@ with st.container():
                 """
             )   
             
-        st.markdown("----")  
+        st.markdown("----") 
+        st.subheader("Hotel Revenue Analysis") 
         with st.container():
             text_col3, image_col3 = st.columns(2)
         
         # -------------- Hotel Revenue Analysis --------------------
+            
             with text_col3:
-                st.subheader("Hotel Revenue Analysis")
                 st.write(
                     """
                     - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
@@ -242,7 +243,8 @@ with st.container():
                         slideshow_swipeable(IMAGES)
 
             
-        st.markdown("----")  
+        st.markdown("----") 
+        st.subheader("Lottery Revenue Analysis") 
         with st.container():
             image_col4, text_col4 = st.columns(2)
             
@@ -297,8 +299,8 @@ with st.container():
 
                 # if __name__ == '__main__':
                         slideshow_swipeable(IMAGES)
+                        
             with text_col4:
-                st.subheader("Lottery Revenue Analysis")
                 st.write(
                     """
                     - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
@@ -314,13 +316,13 @@ with st.container():
 
 if selected == "Power BI Project":
     st.subheader(f"{selected}")
-    
+    st.subheader("Super Market Sales Analysis")
     with st.container():
         text_col5, image_col5 = st.columns(2)
         
         # -------------- Super Market Revenue Analysis --------------------
-        with text_col5:
-            st.subheader("Super Market Sales Analysis")
+        
+        with text_col5: 
             st.write(
                 """
                 - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
@@ -387,7 +389,8 @@ if selected == "Power BI Project":
                     slideshow_swipeable(IMAGES)
                     
                     
-    st.markdown("----")  
+    st.markdown("----") 
+    st.subheader("People Counting Dashboard") 
     with st.container():
         image_col6, text_col6 = st.columns(2)
         
@@ -443,8 +446,8 @@ if selected == "Power BI Project":
 
             # if __name__ == '__main__':
                     slideshow_swipeable(IMAGES)
+        
         with text_col6:
-            st.subheader("People Counting Dashboard")
             st.write(
                 """
                 - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
@@ -541,7 +544,6 @@ if selected == "Sem Project":
         
         with left_col8:
             IMAGES = [
-                "https://github.com/jaghant/images/blob/main/Sem%20III/Data.png?raw=true",
                 "https://github.com/jaghant/images/blob/main/Sem%20III/Ship%20modes.png?raw=true",
                 "https://github.com/jaghant/images/blob/main/Sem%20III/Total%20sales%20per%20year.png?raw=true",
                 "https://github.com/jaghant/images/blob/main/Sem%20III/Total%20sales%20trend.png?raw=true",
