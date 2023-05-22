@@ -163,11 +163,16 @@ with st.container():
         with text_col2:
             st.write(
                 """
-                - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
-                    visualization – Book mark using visualization – Tool tips
-                - Dashboards publish to Power BI cloud – Dashboard and MySQL database connections using
-                    On-premises data gateway – Scheduled based refresh of the dashboard.
-                - Time series forecasting analysis and Anomaly detection.    
+                - Use good user interface.
+                - DAX functions – convert to category, Basic calculations - sum of the values & calculate the percentage.
+                - KPI cards – Revenue & other categories.
+                - Filters - category filter & date filter.
+                - Different visualization - pie chart & bar chart.
+                - Tool tips - easy to understand category wise deep analysis.
+                - Dashboards publish to Power BI cloud.
+                - Dashboard and MySQL database connections using On-premises data gateway.
+                - Scheduled based refresh of the dashboard.
+                - Time series forecasting analysis and Anomaly detection.   
                 """
             )   
             
@@ -181,12 +186,16 @@ with st.container():
             with text_col3:
                 st.write(
                     """
-                    - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
-                        visualization – Book mark using visualization – Tool tips
+                    - Use good user interface 
+                    - DAX functions – convert to category, Basic calculations - sum of the values & calculate the percentage.
+                    - KPI cards – room revenue & room categories.
+                    - Filters - room category filter, date filter & breakup filter.
+                    - Different visualization – pie chart, bar chart & clustered bar chart.
+                    - Book mark using visualization – to change the visualize "Total Revenue, Rooms Booked, Total Occupancy, ARR".
+                    - Tool tips - easy to understand the category wise deep analysis.
                     - Dashboards publish to Power BI cloud – Dashboard and MySQL database connections using
                         On-premises data gateway – Scheduled based refresh of the dashboard.
-                    - Time series forecasting analysis and Anomaly detection. 
-                    
+                    - Time series forecasting analysis and Anomaly detection.
                     """
                 )    
                 
@@ -303,14 +312,16 @@ with st.container():
             with text_col4:
                 st.write(
                     """
-                    - Use good user interface – DAX functions – some basic calculations – KPI cards – Filters -Different 
-                        visualization – Book mark using visualization – Tool tips
-                    - Dashboards publish to Power BI cloud – Dashboard and MySQL database connections using
-                        On-premises data gateway – Scheduled based refresh of the dashboard.
-                    - Python automate – Run the python file watcher - When the file put into the folder – File watcher Push the 
-                        data into MySQL database – If any error on this file Push the error folder & check the log file using fix the 
-                        error’s – If no error, the file push to the success folder & push to the MySQL database – All of this run on a 
-                        local server.
+                    - Use good user interface.
+                    - DAX functions - some basic calculations, sum of the values. 
+                    - Value cards - Despatch Qty, Unsold, Margin, Collection, Received, Receivable.
+                    - Filters - Date, State, Area, Lottery name and Stockist name filters.
+                    - Different visualization - pie chart, Scacked bar chart, clustered bar chart.
+                    - Book mark using visualization - to change visualize like "Despatch, Unsold, Margin, Collection, Receivable and Received".
+                    - Tool tips - easy to understand the collection like "Total, Average, Percentage and day by day collections".
+                    - Dashboards publish to Power BI cloud.
+                    - Dashboard and MySQL database connections using On-premises data gateway.
+                    - Scheduled based refresh of the dashboard.
                     """
                 )        
 
