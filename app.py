@@ -49,7 +49,7 @@ with st.container():
         st.markdown(
             """
             - I have completed one internship training in AES Technologies.
-            - Search data science-related jobs.
+            - Search data science, data analyst, BI analyst-related jobs.
             - Learn new things and improve my skills.
             """
         )
@@ -104,7 +104,6 @@ with st.container():
     )
     if selected == "Intern Project":
         st.subheader(f"{selected}")
-        st.subheader("Sports Revenue Analysis")
         image_col2, text_col2 = st.columns(2)
     
     # -------------- Sports Revenue Analysis --------------------
@@ -113,7 +112,13 @@ with st.container():
                     IMAGES = [
                 "https://user-images.githubusercontent.com/108980892/225910844-589b5dd9-d95d-478e-babd-6c6a41017ec0.png",
                 "https://user-images.githubusercontent.com/108980892/225910973-ca77ae75-42f8-48d5-889c-8d6149a16599.png",
-                "https://user-images.githubusercontent.com/108980892/226608321-9475c077-60e2-4e59-8f04-3538affd2805.png"
+                "https://user-images.githubusercontent.com/108980892/226608321-9475c077-60e2-4e59-8f04-3538affd2805.png",
+                "https://user-images.githubusercontent.com/108980892/225911314-713904b1-1173-4097-b5c2-fb8264a6bb91.png",
+                "https://user-images.githubusercontent.com/108980892/225911403-95a0c4b7-26a9-4df8-a91b-4bce3e20263f.png",
+                "https://user-images.githubusercontent.com/108980892/225911488-949724d5-a94b-4641-9d66-f20727c7df35.png",
+                "https://user-images.githubusercontent.com/108980892/225911598-4b9e33b6-4cfb-4111-9252-fb4307a88e58.png",
+                "https://user-images.githubusercontent.com/108980892/230578101-e8aac3ad-77d1-40fc-9f05-d39bf0371adc.png",
+                "https://user-images.githubusercontent.com/108980892/230577946-22f09151-cc1a-47e7-9452-8e54a5052148.png"   
             ]
 
 
@@ -159,171 +164,38 @@ with st.container():
 
             # if __name__ == '__main__':
                     slideshow_swipeable(IMAGES)
+                     
         
         with text_col2:
             st.write(
                 """
                 - Use good user interface.
                 - DAX functions – convert to category, Basic calculations - sum of the values & calculate the percentage.
-                - KPI cards – Revenue & other categories.
-                - Filters - category filter & date filter.
-                - Different visualization - pie chart & bar chart.
+                - KPI cards – Revenue & other categories - room revenue & room categories.
+                - Filters - category filter & date filter - room category filter, date filter & breakup filter.
+                - Different visualization - pie chart - bar chart - clustered bar chart & Scacked bar chart.
                 - Tool tips - easy to understand category wise deep analysis.
+                - Book mark using visualization – to change the visualize "Total Revenue, Rooms Booked, Total Occupancy, ARR".
                 - Dashboards publish to Power BI cloud.
-                - Dashboard and MySQL database connections using On-premises data gateway.
-                - Scheduled based refresh of the dashboard.
-                - Time series forecasting analysis and Anomaly detection.   
+                - Dashboard and MySQL database connections using On-premises data gateway. 
+                - Scheduled based refresh of the dashboard.   
                 """
             )   
+    link2, link3, link4, link5= st.columns(4)
+    with link2:   
+            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectiond7bce0e78f8c415737fb"
+            st.write(f"Link - [Sports Revenue Analysis]({link})")
+    with link3:
+            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSection339245b9eb185d4081cd"
+            st.write(f" - [Hotel Revenue Analysis]({link})")
+    with link4:
+            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectionfc5cf79d510b3c312bcb"
+            st.write(f" - [Lottery Revenue Analysis]({link})")   
+    with link5:
+            st.write("##")                      
+               
             
-        st.markdown("----") 
-        st.subheader("Hotel Revenue Analysis") 
-        with st.container():
-            text_col3, image_col3 = st.columns(2)
         
-        # -------------- Hotel Revenue Analysis --------------------
-            
-            with text_col3:
-                st.write(
-                    """
-                    - Use good user interface 
-                    - DAX functions – convert to category, Basic calculations - sum of the values & calculate the percentage.
-                    - KPI cards – room revenue & room categories.
-                    - Filters - room category filter, date filter & breakup filter.
-                    - Different visualization – pie chart, bar chart & clustered bar chart.
-                    - Book mark using visualization – to change the visualize "Total Revenue, Rooms Booked, Total Occupancy, ARR".
-                    - Tool tips - easy to understand the category wise deep analysis.
-                    - Dashboards publish to Power BI cloud – Dashboard and MySQL database connections using
-                        On-premises data gateway – Scheduled based refresh of the dashboard.
-                    - Time series forecasting analysis and Anomaly detection.
-                    """
-                )    
-                
-            with image_col3:
-                        IMAGES = [
-                    "https://user-images.githubusercontent.com/108980892/225911314-713904b1-1173-4097-b5c2-fb8264a6bb91.png",
-                    "https://user-images.githubusercontent.com/108980892/225911403-95a0c4b7-26a9-4df8-a91b-4bce3e20263f.png",
-                    "https://user-images.githubusercontent.com/108980892/225911488-949724d5-a94b-4641-9d66-f20727c7df35.png",
-                    "https://user-images.githubusercontent.com/108980892/225911598-4b9e33b6-4cfb-4111-9252-fb4307a88e58.png"
-                ]
-
-
-                        def slideshow_swipeable(images):
-                    # Generate a session state key based on images.
-                            key = f"slideshow_swipeable_{str(images).encode().hex()}"
-
-                    # Initialize the default slideshow index.
-                            if key not in st.session_state:
-                                st.session_state[key] = 0
-
-                    # Get the current slideshow index.
-                            index = st.session_state[key]
-
-                    # Create a new elements frame.
-                            with elements(f"frame_{key}"):
-
-                        # Use mui.Stack to vertically display the slideshow and the pagination centered.
-                        # https://mui.com/material-ui/react-stack/#usage
-                                with mui.Stack(spacing=2, alignItems="center"):
-
-                            # Create a swipeable view that updates st.session_state[key] thanks to sync().
-                            # It also sets the index so that changing the pagination (see below) will also
-                            # update the swipeable view.
-                            # https://mui.com/material-ui/react-tabs/#full-width
-                            # https://react-swipeable-views.com/demos/demos/
-                                    with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
-                                        for image in images:
-                                            html.img(src=image, css={"width": "100%"})
-
-                            # Create a handler for mui.Pagination.
-                            # https://mui.com/material-ui/react-pagination/#controlled-pagination
-                                    def handle_change(event, value):
-                                # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
-                                        st.session_state[key] = value-1
-
-                            # Display the pagination.
-                            # As the index value can also be updated by the swipeable view, we explicitely
-                            # set the page value to index+1 (page value starts at 1).
-                            # https://mui.com/material-ui/react-pagination/#controlled-pagination
-                                    mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
-
-
-                # if __name__ == '__main__':
-                        slideshow_swipeable(IMAGES)
-
-            
-        st.markdown("----") 
-        st.subheader("Lottery Revenue Analysis") 
-        with st.container():
-            image_col4, text_col4 = st.columns(2)
-            
-            # -------------- Lottery Revenue Analysis --------------------
-            
-            with image_col4:
-                        IMAGES = [
-                    "https://user-images.githubusercontent.com/108980892/230578101-e8aac3ad-77d1-40fc-9f05-d39bf0371adc.png",
-                    "https://user-images.githubusercontent.com/108980892/230577946-22f09151-cc1a-47e7-9452-8e54a5052148.png"
-                ]
-
-
-                        def slideshow_swipeable(images):
-                    # Generate a session state key based on images.
-                            key = f"slideshow_swipeable_{str(images).encode().hex()}"
-
-                    # Initialize the default slideshow index.
-                            if key not in st.session_state:
-                                st.session_state[key] = 0
-
-                    # Get the current slideshow index.
-                            index = st.session_state[key]
-
-                    # Create a new elements frame.
-                            with elements(f"frame_{key}"):
-
-                        # Use mui.Stack to vertically display the slideshow and the pagination centered.
-                        # https://mui.com/material-ui/react-stack/#usage
-                                with mui.Stack(spacing=2, alignItems="center"):
-
-                            # Create a swipeable view that updates st.session_state[key] thanks to sync().
-                            # It also sets the index so that changing the pagination (see below) will also
-                            # update the swipeable view.
-                            # https://mui.com/material-ui/react-tabs/#full-width
-                            # https://react-swipeable-views.com/demos/demos/
-                                    with mui.SwipeableViews(index=index, resistance=True, onChangeIndex=sync(key)):
-                                        for image in images:
-                                            html.img(src=image, css={"width": "100%"})
-
-                            # Create a handler for mui.Pagination.
-                            # https://mui.com/material-ui/react-pagination/#controlled-pagination
-                                    def handle_change(event, value):
-                                # Pagination starts at 1, but our index starts at 0, explaining the '-1'.
-                                        st.session_state[key] = value-1
-
-                            # Display the pagination.
-                            # As the index value can also be updated by the swipeable view, we explicitely
-                            # set the page value to index+1 (page value starts at 1).
-                            # https://mui.com/material-ui/react-pagination/#controlled-pagination
-                                    mui.Pagination(page=index+1, count=len(images), color="primary", onChange=handle_change)
-
-
-                # if __name__ == '__main__':
-                        slideshow_swipeable(IMAGES)
-                        
-            with text_col4:
-                st.write(
-                    """
-                    - Use good user interface.
-                    - DAX functions - some basic calculations, sum of the values. 
-                    - Value cards - Despatch Qty, Unsold, Margin, Collection, Received, Receivable.
-                    - Filters - Date, State, Area, Lottery name and Stockist name filters.
-                    - Different visualization - pie chart, Scacked bar chart, clustered bar chart.
-                    - Book mark using visualization - to change visualize like "Despatch, Unsold, Margin, Collection, Receivable and Received".
-                    - Tool tips - easy to understand the collection like "Total, Average, Percentage and day by day collections".
-                    - Dashboards publish to Power BI cloud.
-                    - Dashboard and MySQL database connections using On-premises data gateway.
-                    - Scheduled based refresh of the dashboard.
-                    """
-                )        
 
 if selected == "Power BI Project":
     st.subheader(f"{selected}")
