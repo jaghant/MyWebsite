@@ -180,20 +180,20 @@ with st.container():
                 - Dashboard and MySQL database connections using On-premises data gateway. 
                 - Scheduled based refresh of the dashboard.   
                 """
-            )   
-    link2, link3, link4, link5= st.columns(4)
-    with link2:   
-            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectiond7bce0e78f8c415737fb"
-            st.write(f"Link - [Sports Revenue Analysis]({link})")
-    with link3:
-            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSection339245b9eb185d4081cd"
-            st.write(f" - [Hotel Revenue Analysis]({link})")
-    with link4:
-            link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectionfc5cf79d510b3c312bcb"
-            st.write(f" - [Lottery Revenue Analysis]({link})")   
-    with link5:
-            st.write("##")                      
-               
+            )
+            link2, link3, link4, link5= st.columns(4)
+            with link2:
+                link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectiond7bce0e78f8c415737fb"
+                st.write(f"Link - [Sports Revenue Analysis]({link})")
+            with link3:
+                link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSection339245b9eb185d4081cd"
+                st.write(f" - [Hotel Revenue Analysis]({link})")
+            with link4:
+                    link = "https://app.powerbi.com/view?r=eyJrIjoiNjZjMGUxNTctYzUwNC00MzU1LTk4MjMtMTE0ZGUyZmE4Nzc1IiwidCI6IjJkMWUxN2Q0LWRlYzMtNGM4NS05MjcxLTIzYjIxZmM5ODhkMCJ9&pageName=ReportSectionfc5cf79d510b3c312bcb"
+                    st.write(f" - [Lottery Revenue Analysis]({link})")   
+            with link5:
+                    st.write("##")                      
+                       
             
         
 
